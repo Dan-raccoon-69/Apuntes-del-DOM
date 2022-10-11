@@ -1,0 +1,12 @@
+.nombre, 
+.miNombre{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: red;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+.miNombre{
+    font-weight: bold;
+}
