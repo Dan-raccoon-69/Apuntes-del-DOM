@@ -196,4 +196,76 @@ addEventListener('keyup', (e) => {
 
 
 
+// EVENTOS DE FORMULARIO
 
+/**
+ * Submit
+ * Change
+ * Focus
+ * Blur
+ * Reset
+ */
+
+// Submit ************************
+// se ejecuta cuando el formulario se envia
+
+// Change ************************
+// Se ejecuta cuando un campo del formulario cambia de valor
+
+// Focus ************************
+// Se ejecuta cuando haces click en un input
+
+// Blur ************************
+// Se ejecuta cuando ya NO te encuentras en un input (focus)
+
+// Reset ************************
+// Se ejecuta cuando quieres Resetear el formulario
+
+
+
+// EVENTOS MULTIMEDIA
+
+/**
+ * Play
+ * Pause
+ */
+
+const video = document.getElementById('video');
+const bPlay = document.querySelector('.play');
+const bPause = document.querySelector('.pause');
+
+bPlay.addEventListener('click', () => {
+    video.play();
+});
+bPause.addEventListener('click', () => {
+    video.pause();
+});
+
+
+// EVENTOS DEL DOM
+
+/**
+ * DOMContentloaded
+ */
+
+// DOMContentloaded (el más rapido, cuando el navegador leyó el HTML y lo proceso)
+// Se ejecuta cuando todo el DOM haya cargado,recursos externos, imagenes, etc quiza aun no se hayan cargado, lo que nos interesa es el contenido del DOM. 
+
+// Su usó es de mucha ayuda, cuando tu estas llamando elementos en el DOM antes de que existan.
+
+
+// EVENTOS DEL NAVEGADOR
+
+/**
+ * load
+ * scroll
+ * resize
+ */
+
+// load (cuando cargan todos los recursos)
+// parecido a DOMContentloaded, ocurre cuando carga toda la pagina.
+
+
+// Scroll
+// nos da el valor del scroll
+// addEventListener('scroll', () => console.log(scrollX,scrollY));

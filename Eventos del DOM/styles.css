@@ -1,4 +1,5 @@
 body{
+    /* min-height: 200vh; scroll */
     min-height: 100vh;
     outline: 1px solid red;
 }
@@ -35,4 +36,11 @@ body{
     border-radius: 100%;
     background-color: black;
     margin-top: 1rem;
+}
+
+.play,
+.pause{
+    padding: 0.5rem;
+    width: 60px;
+    display: block;
 }
