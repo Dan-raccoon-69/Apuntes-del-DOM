@@ -114,3 +114,86 @@ document.addEventListener('click', (e) => {
 
 // EVENTOS DE TECLADO
 
+/**
+ * Keydown
+ * Keyup
+ * Keypress
+ */
+
+// Keydown ************************
+// cuando presionas una tecla
+
+
+
+const input = document.getElementById('input_text');
+
+input.addEventListener('keydown',(e) => {
+    /* cuando nos encontramos en 'keydown' y sobre el objeto e (evento)
+        nos brinda información, algunas de ellas es sobre que teclas tocamos,
+        si tocamos ctrl, alt.  */
+    console.log(e);
+    // tecla que presionamos
+    console.log(e.key);
+    // retorna un true o false si apretamos ctrl
+    console.log(e.ctrlKey);
+    // retorna un true o false si apretamos alt
+    console.log(e.altKey);
+});
+
+// cada vez que presionemos una tecla nos la mostrara en un alert
+
+// addEventListener('keydown', (e) => {
+//     alert(e.key);
+// });
+
+
+document.addEventListener('keydown', (e) => {
+    if(e.key == "a" && e.ctrlKey == true){
+        console.log(e.ctrlKey);
+        console.log(e.Key);
+        e.preventDefault();
+        alert('Presionaste Ctrl + a');
+    }
+});
+
+
+// bola
+
+const bola = document.querySelector('.bola');
+console.log(bola);
+let x = 0, y = 0;
+
+const mover = (e) => {
+    switch(e.key){
+        case 'ArrowUp':
+        y = y - 10;
+        break;
+        case 'ArrowDown':
+        y = y + 10;
+        break;
+        case 'ArrowLeft':
+        x = x - 10;
+        break;
+        case 'ArrowRight':
+        x = x + 10;
+        break;
+    }
+    bola.style.transform = `translate(${x}px,${y}px)`;
+}
+
+addEventListener('keydown', (e) => mover(e));
+
+
+// Keyup ************************
+// cuando sueltas una tecla
+
+addEventListener('keyup', (e) => {
+    console.log(e.key);
+});
+
+// Keypress ************************
+// cuando tienes presionada una tecla y no la sueltas
+
+
+
+
